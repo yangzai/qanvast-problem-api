@@ -30,7 +30,7 @@ app.get('/hello-world', function (req, res) {
 //      res.send(body);
 //    });
     
-    //METHOD 2: Create wrapper for request.get() to handle callback using deffered promise
+    //METHOD 2: Create wrapper for request.get() to handle callback using deferred promise
     var requestGet = function (url) {
       var deferred = RSVP.defer();
       
