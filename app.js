@@ -2,7 +2,6 @@
 
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
 
 var request = require('request');
 var qs = require('querystring');
@@ -12,7 +11,6 @@ var workerHost = process.argv[2] || 'localhost';
 var workerPort = process.argv[3] || 8000;
 
 app.use(require('express-promise')());
-app.use(bodyParser.json());
 
 app.get('/hello-world', function (req, res) {
   
