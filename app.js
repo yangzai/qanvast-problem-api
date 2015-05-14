@@ -14,7 +14,7 @@ queue.on('connected', function() {
   //As consumer
   queue.create('hello.callback', function () {
     queue.handle('hello.callback', function (job, ack) {
-      responseHash[job.id].json(job.message);
+      responseHash[job.id].send(job.message);
       delete responseHash[job.id];
       ack();
     });
